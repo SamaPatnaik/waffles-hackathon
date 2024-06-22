@@ -1,7 +1,23 @@
+.chat-box {
+  background-color: #F79090;
+  width: 100%;
+  font-size: 25px;
+  margin: auto;
+  text-align: left;
+  padding: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  min-width: 100%;
+  min-height: 100vh;
   text-align: center;
 }
 
