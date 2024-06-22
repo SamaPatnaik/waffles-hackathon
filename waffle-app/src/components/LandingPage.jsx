@@ -1,5 +1,4 @@
 function LandingPage() {
-
   return (
     <div className="login">
       <div className="login-intro">

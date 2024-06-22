@@ -10,10 +10,7 @@ function App() {
 
   return (
     <>
-      <div>
-        HELLO !! DUMP ALL UR STUFF HERE TO TEST IT OUT rlly look away from that
-        main page it's hideous
-      </div>
+      <div></div>
     </>
   );
 }
