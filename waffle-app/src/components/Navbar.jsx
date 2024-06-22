@@ -1,23 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Navbar.css";
 import {FaBars, FaTimes} from "react-icons/fa";
-// import Logo from "./src/images_vids/logo_waffle-removedbg.png";
+import Logo from "../images_vids/logo_waffle-removedbg.png";
 
 const Navbar = () => {
+    const [click, setClick] = useState(false);
+
+    const handleClick = () => setClick(!click);
+    
     return(
         <div className="navbar">
-            <div className="logo">
-            {/* <img src = {Logo} alt = "logo"/> */} logo
+        <div className="logo">
+            <img src = {Logo} alt = "logo"/>
         </div>
 
-        <ul className="nav-menu">
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item"><a href="">home</a></li>
             <li className="nav-item"><a href="">about</a></li>
             <li className="nav-item"><a href="">contact</a></li>
         </ul>
 
-        <div className="hamburger">
-            <FaBars />
+        <div className="hamburger" onClick={handleClick}>
+            {click ? (<FaTimes />) : (<FaBars />)}
         </div>
 
         </div>

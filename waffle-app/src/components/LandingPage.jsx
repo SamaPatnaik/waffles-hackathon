@@ -1,8 +1,10 @@
-function LandingPage() {
+import React from 'react';
+import "./LandingPage.css";
+
+const LandingPage = () => {
   return (
-    <div className="login">
-      <div className="login-intro">blah blah here is some info</div>
-      <button className="btn btn-primary login-btn" onClick={() => {}}>Sign in with Google</button>
+    <div>
+      <h1>Empower your health with the support you deserve</h1>
     </div>
   );
 }
