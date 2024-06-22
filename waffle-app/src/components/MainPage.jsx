@@ -2,20 +2,33 @@ import { useState } from "react";
 import InputBox from "./InputBox.jsx";
 import InfoBox from "./InfoBox.jsx";
 import ContactBox from "./ContactBox.jsx";
+import Message from "./Message.jsx";
 
 // main page for chatting
 function MainPage() {
   var [code, setCode] = useState(false);
+  // sorry ignore these placeholders
+  var [messages, setMessages] = useState([
+    { isUser: true, message: "hryeud" },
+    { isUser: false, message: "hryds d shfeud" },
+  ]);
+  var [contacts, setContacts] = useState([{}]);
+
+  const sendMessage = (message) => {
+    setMessages(messages.concat([{ isUser: true, message: message }]));
+  };
 
   return (
     <div className="main">
       <div className="chat-box">
+        Discuss any wellness issues, ask for assistance, or connect to
+        professionals.
         <div className="messages">
-          Discuss any wellness issues, ask for assistance, or connect to
-          professionals.
+          {messages.map((item) => (
+            <Message isUser={item.isUser} message={item.message}></Message>
+          ))}
         </div>
-        {code}
-        <InputBox></InputBox>
+        <InputBox callback={sendMessage}></InputBox>
       </div>
 
       <div className="your-info overflow-auto">
@@ -23,37 +36,41 @@ function MainPage() {
           <p className="info-header">Your Info</p>
           <p className="info-description">Click on an info box to expand.</p>
         </div>
-        <InfoBox
-          className="contact-box"
-          info={"hdfey duddfjksfhjsdfkj"}
-          summary={"hi he jrhbsjf dhfj fhj "}
-        ></InfoBox>
-        <ContactBox info="idk pretend this has contact info"></ContactBox>
-        <InfoBox
-          info="heehoo djfmsfjdj "
-          summary={"blah blah hrfhsdh fhds jfds"}
-        ></InfoBox>
-        <InfoBox
-          info="heehoo fhds jkfsdh jfdsfsdjkf hsdfdjfoe"
-          summary={"blah blah hrfhsdh fhds jfds"}
-        ></InfoBox>
-        <InfoBox
-          info="heehoo hdis fh fhds fkjdhskf sjf s"
-          summary={"blah blah hrfhsdh fhds jfds"}
-        ></InfoBox>
-        <InfoBox
-          info="heehoo"
-          summary={"blah blah hrfhsdh fhds jfds"}
-        ></InfoBox>
-        <InfoBox
-          info="heehoo"
-          summary={"blah blah hrfhsdh fhds jfds"}
-        ></InfoBox>
-        <InfoBox
-          info="heehoo"
-          summary={"blah blah hrfhsdh fhds jfds"}
-        ></InfoBox>
-        <p>hi</p>
+        <ContactBox
+          type="volunteer"
+          name="John Doe"
+          specialty="idk"
+          expertise="uhh cancer"
+          story="blha hsldhsada shhdsj"
+        ></ContactBox>
+        <ContactBox
+          type="professional"
+          name="John Doe"
+          specialty="idk"
+          expertise="uhh cancer"
+          story="blha hsldhsada shhdsj"
+        ></ContactBox>
+        <ContactBox
+          type="volunteer"
+          name="John Doe"
+          specialty="idk"
+          expertise="uhh cancer"
+          story="blha hsldhsada shhdsj"
+        ></ContactBox>
+        <ContactBox
+          type="volunteer"
+          name="John Doe"
+          specialty="idk"
+          expertise="uhh cancer"
+          story="blha hsldhsada shhdsj"
+        ></ContactBox>
+        <ContactBox
+          type="volunteer"
+          name="John Doe"
+          specialty="idk"
+          expertise="uhh cancer"
+          story="blha hsldhsada shhdsj"
+        ></ContactBox>
       </div>
     </div>
   );

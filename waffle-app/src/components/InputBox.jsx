@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 
-function MainPage() {
+function InputBox({ callback }) {
   const defaultMessage = "Chat about your wellness...";
   var [input, setInput] = useState(defaultMessage);
 
@@ -17,8 +17,8 @@ function MainPage() {
         }}
         onKeyDown={(event) => {
           if (event.key == "Enter") {
-            alert("weeeeeee (i'll change this later dw)");
-            setInput(defaultMessage);
+            setInput("");
+            callback(event.target.value);
           }
         }}
         onChange={(event) => {
@@ -29,4 +29,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default InputBox;
