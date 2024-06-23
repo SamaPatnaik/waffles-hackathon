@@ -152,6 +152,42 @@
   color: wheat;
 }
 
+.people {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  gap: 60px;
+  margin: auto;
+}
+
+.person {
+  background-color: #ffa3a3;
+  padding: 30px;
+  width: 30%;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.person-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.person-info {
+  margin: 0px;
+}
+
+.contacts {
+  margin: auto;
+  font-size: 30px;
+  font-family: Askan;
+  text-align: center;
+}
+
+.contact-info {
+  font-weight: lighter;
+}
+
 /* #root {
   min-width: 100%;
   min-height: 100vh;

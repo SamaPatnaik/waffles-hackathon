@@ -8,8 +8,7 @@ import Message from "../components/Message.jsx";
 function MainPage() {
   var [isBot, setIsBot] = useState(true);
   var [messages, setMessages] = useState([
-    { isUser: true, message: "hryeud fake message ghfn" },
-    { isUser: false, message: "hryds d shfeud" },
+    { isUser: false, message: "Let's start talking!" },
   ]);
   var [contacts, setContacts] = useState([false]);
 
