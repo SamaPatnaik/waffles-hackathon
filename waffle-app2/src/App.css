@@ -1,0 +1,233 @@
+
+
+.chat-box {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  margin: auto;
+  text-align: left;
+  padding: 25px;
+  padding-bottom: 0;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  height: 90%;
+  margin-top: 10px;
+  overflow-y: scroll;
+}
+
+.input-box {
+  font-size: 20px;
+  padding: 20px;
+  margin: auto;
+}
+
+.default-chat {
+  color: grey;
+}
+
+.chat-input {
+  width: 70vw;
+  border-radius: 20px;
+  border-width: 0px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 17px;
+  background-color: #FFCD77;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  font-family: Askan;
+}
+
+.blurb {
+  font-weight: lighter;
+}
+
+.your-info {
+  width: 30%;
+  background-color: #FFCD77;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: auto;
+  padding: 15px;
+  gap: 15px;
+
+}
+
+.info-box {
+  background: -webkit-linear-gradient( #ffa3a3, #f3c066);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.info-box:active { 
+  transform: scale(0.98); 
+  /* Scaling button to 0.98 to its original size */ 
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+  /* Lowering the shadow */ 
+} 
+
+.info-box:hover {
+  background: -webkit-linear-gradient(#f4aaaa, #edc786);
+}
+
+.information {
+  color: #27140f;
+}
+
+.contact-box {
+  background-color: #F6AFA9;
+  opacity: 0.9;
+  color: white;
+  font-size: 13px;
+  border-radius: 10px;
+  padding: 1px;
+}
+
+
+.info-header {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
+}
+
+.info-description {
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 0px;
+}
+
+.message-box {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message {
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border-bottom: 0px;
+  padding-top: 15px;
+  padding-bottom: 1px;
+  width: fit-content;
+}
+
+.user-message {
+  background-color: wheat;
+  color: #E2635D;
+  margin-left: auto;
+  position: relative;
+  max-width: 90%;
+}
+
+.user-text {
+  color: #E2635D;
+}
+
+.other-message {
+  background-color: #E2635D;
+  color: wheat;
+  max-width: 90%;
+}
+
+.other-text {
+  color: wheat;
+}
+
+.people {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  gap: 60px;
+  margin: auto;
+}
+
+.person {
+  background-color: #ffa3a3;
+  padding: 30px;
+  width: 30%;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.person-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.person-info {
+  margin: 0px;
+}
+
+.contacts {
+  margin: auto;
+  font-size: 50px;
+  font-family: Askan;
+  text-align: center;
+  padding-top: 2rem;
+  color: rgb(30, 25, 43);
+}
+
+.contact-info {
+  font-weight: lighter;
+}
+
+/* #root {
+  min-width: 100%;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */

@@ -1,0 +1,87 @@
+.lpgbody {
+    display: flex;
+    flex-direction: row;
+    /* padding-left: 3.1rem; */
+    text-align: left;
+    margin-left: 4.5rem;
+}
+
+/* .content {
+    display: flex;
+    flex-direction: column;
+} */
+
+.left-wrapper {
+    margin: auto;
+    width: 45%;
+}
+
+.home-image {
+    width: 45%;
+    margin: auto;
+}
+
+/* .content {
+    /*width: 58%;*/
+
+
+.content h1 {
+    font-size: 4.5rem;
+    padding-top: 4rem;
+}
+
+.button {
+    width: 100%;
+}
+
+.deserve {
+    font-weight: bold;
+    background: -webkit-linear-gradient(#ebc5ff, #ff9c62);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* color: #FFEF9A; */
+}
+
+.para {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    width: 80%;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.para span {
+    font-weight: bold;
+    color: rgb(151, 84, 218);
+}
+
+.para button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background: #ffcd77;
+    color: #1a1727;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+
+}
+
+.para button:hover {
+    background: #ff9c62;
+    transition: all 0.3s ease-in-out;
+}
+
+
+ /* .signin{
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    justify-content: flex-end; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    padding-right: 4.5rem;
+} */
