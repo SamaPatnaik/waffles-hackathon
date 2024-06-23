@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 0;
     padding: 0.5rem;
     /* overflow: hidden;
     position: fixed; */
@@ -22,6 +23,12 @@
 
 .nav-item {
     padding: 1rem;
+}
+
+.nav-item:hover {
+    background-color: #ffcd77;
+    transition: 0.3s;
+
 }
 
 
