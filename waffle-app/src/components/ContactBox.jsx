@@ -12,15 +12,15 @@ function ContactBox({ type, name, specialty, expertise, story }) {
     <div className="info-box">
       <p></p>
       <p className="information">
-        Name: {name}
+        Name: <span className="blurb">{name}</span>
         <br></br>
         {description}
-        {specialty}
+        <span className="blurb">{specialty}</span>
         <br></br>
         {category}
-        {expertise}
+        <span className="blurb">{expertise}</span>
         <br></br>
-        Story: {story}
+        Story: <span className="blurb">{story}</span>
       </p>
     </div>
   );

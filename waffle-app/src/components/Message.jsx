@@ -10,7 +10,7 @@ function Message({ isUser, isBot, message }) {
     return (
       <div className="message-box">
         <div className="message user-message">
-          <p className="date">{message}</p>
+          <p className="user-text">{message}</p>
         </div>
       </div>
     );
@@ -18,7 +18,7 @@ function Message({ isUser, isBot, message }) {
     return (
       <div className="message-box">
         <div className="message other-message">
-          <p className="date">{message}</p>
+          <p className="other-text">{message}</p>
         </div>
       </div>
     );

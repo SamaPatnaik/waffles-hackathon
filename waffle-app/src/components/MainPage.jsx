@@ -15,14 +15,18 @@ function MainPage() {
 
   // sends user's message
   const sendMessage = (message) => {
-    setMessages((prevMessages) => prevMessages.concat([{ isUser: true, message }]));
+    setMessages((prevMessages) =>
+      prevMessages.concat([{ isUser: true, message }])
+    );
     scrollToBottom();
     getResponse(message);
   };
 
   // receives chatbot's message
   const receiveMessage = (message) => {
-    setMessages((prevMessages) => prevMessages.concat([{ isUser: false, message }]));
+    setMessages((prevMessages) =>
+      prevMessages.concat([{ isUser: false, message }])
+    );
     scrollToBottom();
   };
 
@@ -72,10 +76,15 @@ function MainPage() {
   return (
     <div className="main">
       <div className="chat-box">
-        Discuss any wellness issues, ask for assistance, or connect to professionals.
+        Discuss any wellness issues, ask for assistance, or connect to
+        professionals.
         <div id="messages" className="messages">
           {messages.map((item, index) => (
-            <Message key={index} isUser={item.isUser} message={item.message}></Message>
+            <Message
+              key={index}
+              isUser={item.isUser}
+              message={item.message}
+            ></Message>
           ))}
         </div>
         <InputBox callback={sendMessage}></InputBox>
