@@ -7,14 +7,26 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <Navbar/>
-      <LandingPage />
-      {/* <MainPage /> */}
-    </div>
-  );
+  const [isMain, setIsMain] = useState(false);
+  if (isMain) {
+    return (
+      <div>
+        <MainPage></MainPage>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <Navbar />
+        <LandingPage
+          callback={() => {
+            setIsMain(true);
+          }}
+        />
+        {/* <MainPage /> */}
+      </div>
+    );
+  }
 }
 
 export default App;
