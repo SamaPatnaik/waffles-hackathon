@@ -1,6 +1,7 @@
 import React from "react";
 import "./LandingPage.css";
 import pic from "../assets/homepage-image.png";
+import { Link } from "react-router-dom";
 
 const LandingPage = ({ callback }) => {
   return (
@@ -21,13 +22,9 @@ const LandingPage = ({ callback }) => {
             It's easy! Connect with professionals in your area tailored to your
             preferences, & make lifelong friends who understand you.
           </p>
-          <button
-            onClick={() => {
-              callback();
-            }}
-          >
-            try chatbot
-          </button>
+          <Link to="/main">
+            <button className="button">try chatbot</button>
+          </Link>
         </div>
       </div>
 

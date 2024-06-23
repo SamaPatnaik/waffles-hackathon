@@ -1,8 +1,8 @@
 import { useState } from "react";
-import InputBox from "./InputBox.jsx";
-import InfoBox from "./InfoBox.jsx";
-import ContactBox from "./ContactBox.jsx";
-import Message from "./Message.jsx";
+import InputBox from "../components/InputBox.jsx";
+import InfoBox from "../components/InfoBox.jsx";
+import ContactBox from "../components/ContactBox.jsx";
+import Message from "../components/Message.jsx";
 
 // main page for chatting
 function MainPage() {
