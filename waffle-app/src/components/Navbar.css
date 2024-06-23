@@ -32,6 +32,7 @@
 
 @media screen and (max-width: 350px) {
     .nav-menu {
+        background-color: bisque;
         position: fixed;
         left: -100%; 
         top: 10px;
