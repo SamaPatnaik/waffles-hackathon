@@ -6,25 +6,25 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: nowrap;
-    /* gap: 0; */
+    gap: 1rem;
   }
   
   .profile-wrapper {
     margin: auto;
     flex: 1;
-    display: flex;
-    justify-content: center;
-    width: 60%;
+    width: 40%;
+    
   }
   
   .profile {
     text-align: center;
     /* background-color: rgb(255, 151, 146); */
     border-radius: 50%;
+    
   }
   
   .profile img {
-    width: 40%; 
+    width: 25%; 
     border-radius: 50%;
   }
   
@@ -38,7 +38,8 @@
 
 .profile ul {
     margin: auto;
-    text-align: left;
+    text-align: center;
+    border-radius: 10%;
 }
 
  .profile li {
@@ -52,11 +53,11 @@
      color: rgb(96, 31, 157);
 }
 
-
+/* 
 .prof2 {
     text-align: left;
 }
 
 .prof1 {
     text-align: right;
-}
+} */
