@@ -7,7 +7,6 @@ import Message from "./Message.jsx";
 // main page for chatting
 function MainPage() {
   var [code, setCode] = useState(false);
-  // sorry ignore these placeholders
   var [messages, setMessages] = useState([
     { isUser: true, message: "hryeud fake message ghfn" },
     { isUser: false, message: "hryds d shfeud" },
@@ -16,34 +15,34 @@ function MainPage() {
 
   // sends user's message
   const sendMessage = (message) => {
-    setMessages(messages.concat([{ isUser: true, message: message }]));
-    var obj = document.getElementById("messages");
-    setTimeout(() => {
-      var obj = document.getElementById("messages");
-      obj.scrollTop = obj.scrollHeight;
-    }, 10);
+    setMessages((prevMessages) => prevMessages.concat([{ isUser: true, message }]));
+    scrollToBottom();
     getResponse(message);
   };
 
   // receives chatbot's message
   const receiveMessage = (message) => {
-    setMessages(messages.concat([{ isUser: false, message: message }]));
-    var obj = document.getElementById("messages");
+    setMessages((prevMessages) => prevMessages.concat([{ isUser: false, message }]));
+    scrollToBottom();
+  };
+
+  // scrolls to the bottom of the messages
+  const scrollToBottom = () => {
     setTimeout(() => {
-      var obj = document.getElementById("messages");
-      obj.scrollTop = obj.scrollHeight;
+      const obj = document.getElementById("messages");
+      if (obj) {
+        obj.scrollTop = obj.scrollHeight;
+      }
     }, 10);
-    getResponse(message);
   };
 
   // sends post request to backend
-  // guys i really got no clue what im supposed to be doing here
   const getResponse = (value) => {
     const payload = {
       user_input: value,
     };
 
-    fetch("/talk", {
+    fetch("http://127.0.0.1:5000/talk", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -57,11 +56,8 @@ function MainPage() {
         const messages = data.messages;
         const people = data.people;
 
-        // sorry this is just for testing
-        console.log("Messages:");
-        console.log(messages);
-        console.log("Contacts:");
-        console.log(people);
+        console.log("Messages:", messages);
+        console.log("Contacts:", people);
 
         // displays message
         receiveMessage(messages.ai[messages.ai.length - 1]);
@@ -76,11 +72,10 @@ function MainPage() {
   return (
     <div className="main">
       <div className="chat-box">
-        Discuss any wellness issues, ask for assistance, or connect to
-        professionals.
+        Discuss any wellness issues, ask for assistance, or connect to professionals.
         <div id="messages" className="messages">
-          {messages.map((item) => (
-            <Message isUser={item.isUser} message={item.message}></Message>
+          {messages.map((item, index) => (
+            <Message key={index} isUser={item.isUser} message={item.message}></Message>
           ))}
         </div>
         <InputBox callback={sendMessage}></InputBox>
@@ -94,24 +89,24 @@ function MainPage() {
           </p>
         </div>
 
-        {contacts.map((item) =>
-          item == false ? (
-            <></>
-          ) : item.hasOwnProperty("specialty") ? (
+        {contacts.map((item, index) =>
+          !item ? null : item.hasOwnProperty("Specialty") ? (
             <ContactBox
+              key={index}
               type="professional"
-              name={item.name}
-              specialty={item.specialty}
-              expertise={item.expertise}
-              story={item.story}
+              name={item.Name}
+              specialty={item.Specialty}
+              expertise={item.Expertise}
+              story={item.Story}
             ></ContactBox>
           ) : (
             <ContactBox
+              key={index}
               type="volunteer"
-              name={item.name}
-              specialty={item.overcame}
-              expertise={item["support area"]}
-              story={item.story}
+              name={item.Name}
+              specialty={item.Overcame}
+              expertise={item["Support Area"]}
+              story={item.Story}
             ></ContactBox>
           )
         )}
