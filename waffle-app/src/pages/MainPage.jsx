@@ -6,7 +6,7 @@ import Message from "../components/Message.jsx";
 
 // main page for chatting
 function MainPage() {
-  var [code, setCode] = useState(false);
+  var [isBot, setIsBot] = useState(true);
   var [messages, setMessages] = useState([
     { isUser: true, message: "hryeud fake message ghfn" },
     { isUser: false, message: "hryds d shfeud" },
@@ -19,7 +19,9 @@ function MainPage() {
       prevMessages.concat([{ isUser: true, message }])
     );
     scrollToBottom();
-    getResponse(message);
+    if (isBot) {
+      getResponse(message);
+    }
   };
 
   // receives chatbot's message
@@ -28,6 +30,11 @@ function MainPage() {
       prevMessages.concat([{ isUser: false, message }])
     );
     scrollToBottom();
+  };
+
+  const clearLog = () => {
+    setIsBot(false);
+    setMessages([]);
   };
 
   // scrolls to the bottom of the messages
@@ -107,6 +114,7 @@ function MainPage() {
               specialty={item.Specialty}
               expertise={item.Expertise}
               story={item.Story}
+              callback={clearLog}
             ></ContactBox>
           ) : (
             <ContactBox
@@ -116,6 +124,7 @@ function MainPage() {
               specialty={item.Overcame}
               expertise={item["Support Area"]}
               story={item.Story}
+              callback={clearLog}
             ></ContactBox>
           )
         )}

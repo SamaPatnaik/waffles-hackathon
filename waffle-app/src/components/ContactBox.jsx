@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // contains contact info ??? also idk if we need the date
-function ContactBox({ type, name, specialty, expertise, story }) {
+function ContactBox({ type, name, specialty, expertise, story, callback }) {
   let description = "Specialty: ";
   let category = "Expertise: ";
   if (type == "volunteer") {
@@ -9,7 +9,12 @@ function ContactBox({ type, name, specialty, expertise, story }) {
     category = "Support area: ";
   }
   return (
-    <div className="info-box">
+    <div
+      className="info-box"
+      onClick={() => {
+        callback();
+      }}
+    >
       <p></p>
       <p className="information">
         Name: <span className="blurb">{name}</span>
