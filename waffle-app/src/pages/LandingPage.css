@@ -1,8 +1,9 @@
 .lpgbody {
     display: flex;
     flex-direction: row;
-    padding-left: 3.1rem;
+    /* padding-left: 3.1rem; */
     text-align: left;
+    margin-left: 4.5rem;
 }
 
 /* .content {
@@ -12,11 +13,11 @@
 
 .left-wrapper {
     margin: auto;
-    width: 50%;
+    width: 45%;
 }
 
 .home-image {
-    width: 40%;
+    width: 45%;
     margin: auto;
 }
 
@@ -24,8 +25,9 @@
     /*width: 58%;*/
 
 
-.content h1 p {
-    font-size: 2rem;
+.content h1 {
+    font-size: 4.5rem;
+    padding-top: 4rem;
 }
 
 .button {
@@ -44,9 +46,15 @@
 .para {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
-    width: 58%;
-    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    width: 80%;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.para span {
+    font-weight: bold;
+    color: rgb(151, 84, 218);
 }
 
 .para button {

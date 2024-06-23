@@ -179,9 +179,11 @@
 
 .contacts {
   margin: auto;
-  font-size: 30px;
+  font-size: 50px;
   font-family: Askan;
   text-align: center;
+  padding-top: 2rem;
+  color: rgb(30, 25, 43);
 }
 
 .contact-info {

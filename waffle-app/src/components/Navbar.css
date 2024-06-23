@@ -6,6 +6,7 @@
     align-items: center;
     padding-top: 0;
     padding: 0.5rem;
+    font-size: 2rem;
     /* overflow: hidden;
     position: fixed; */
     /* bottom: 0;   */
@@ -13,8 +14,8 @@
 
 
 .navbar img {
-    width: 3.5rem;
-    margin-left: 2rem;
+    width: 8rem;
+    margin-left: 4.5rem;
 }
 
 .nav-menu {
@@ -22,7 +23,7 @@
 }
 
 .nav-item {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .nav-item:hover {
@@ -42,7 +43,7 @@
         background-color: bisque;
         position: fixed;
         left: -100%; 
-        top: 10px;
+        top: 100px;
         flex-direction: column;
         justify-content: center;
         width: 100%;

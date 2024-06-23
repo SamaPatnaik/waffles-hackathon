@@ -19,11 +19,11 @@ const LandingPage = ({ callback }) => {
 
         <div className="para">
           <p>
-            It's easy! Connect with professionals in your area tailored to your
+            It's easy! <span>We'llChat</span> let's you connect with professionals tailored to your
             preferences, & make lifelong friends who understand you.
           </p>
           <Link to="/main">
-            <button className="button">try chatbot</button>
+            <button className="button">chat with Yasu</button>
           </Link>
         </div>
       </div>

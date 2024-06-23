@@ -1,0 +1,57 @@
+.about-container {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .profile-wrapper {
+    margin: auto;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+  
+  .profile {
+    text-align: center;
+  }
+  
+  .profile img {
+    width: 50%; 
+    border-radius: 50%;
+  }
+  
+  .profile-wrapper:nth-child(even) {
+    justify-content: flex-end; 
+  }
+  
+  .profile-wrapper:nth-child(odd) {
+    justify-content: flex-start; 
+  } 
+
+.profile ul {
+    margin: auto;
+    text-align: left;
+}
+
+ .profile li {
+    font-size: 1rem;
+    text-align: left;
+    list-style-type: circle;
+    /* font-weight: bold; */
+  }
+
+.profile h1 {
+     color: blueviolet;
+}
+
+
+.prof2 {
+    text-align: left;
+}
+
+.prof1 {
+    text-align: right;
+}
