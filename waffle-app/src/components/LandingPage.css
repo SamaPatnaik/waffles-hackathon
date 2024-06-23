@@ -1,0 +1,66 @@
+.lpgbody {
+    /* display: flex; */
+    justify-content: space-between;
+    padding-left: 3.1rem;
+    text-align: left;
+}
+
+/* .content {
+    display: flex;
+    flex-direction: column;
+} */
+
+
+.content {
+    width: 58%;
+}
+
+.content h1 p {
+    font-size: 2rem;
+}
+
+.deserve {
+    font-weight: bold;
+    background: -webkit-linear-gradient(#ebc5ff, #ff9c62);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* color: #FFEF9A; */
+}
+
+.para {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 58%;
+    font-size: 0.8rem;
+}
+
+.para button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background: #ffcd77;
+    color: #1a1727;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+
+}
+
+.para button:hover {
+    background: #ff9c62;
+    transition: all 0.3s ease-in-out;
+}
+
+
+ /* .signin{
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    justify-content: flex-end; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    padding-right: 4.5rem;
+} */

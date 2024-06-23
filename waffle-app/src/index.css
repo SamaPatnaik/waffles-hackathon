@@ -12,63 +12,27 @@ ul {
   list-style-type: none;
 }
 
-a {
+a, p {
   text-decoration: none;
-  color: #0b092b;
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  background-color: rgb(255, 245, 243);
+  color: #1a1727;
+}
+
+h1 {
+  font-family: 'Askan', sans-serif;
+  font-weight: 400;
 }
 
 body {
   color: rgb(24, 11, 11);
   line-height: 1.5;
-  /* font-family: 'Askan', sans-serif; */
-  /* font-family: 'Askan Slim', sans-serif; */
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  font-style: normal;
+  /* background: linear-gradient(170deg, rgba(255, 252, 252, 1) 16%, rgba(255, 250, 209, 1) 45%, rgba(255, 209, 221, 1) 100%); */
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+/* 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -99,4 +63,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} */
+} */ 
